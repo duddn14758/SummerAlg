@@ -38,13 +38,7 @@ int main() {
 }
 
 int floor(int start, int end) {
-	if (data[end] < K)
-		return end;
-
-	if (data[start] > K)
-		return -1;
-
-	if (end-start == 1)
+	if (end - start == 1)
 		return start;
 
 	if (data[(start + end) / 2] < K) {
@@ -56,11 +50,6 @@ int floor(int start, int end) {
 }
 
 int ceiling(int start, int end) {
-	if (data[end] < K)
-		return -1;
-
-	if (data[start] > K)
-		return start;
 	if (end - start == 1)
 		return end;
 

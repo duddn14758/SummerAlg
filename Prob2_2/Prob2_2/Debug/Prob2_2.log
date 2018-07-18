@@ -5,6 +5,6 @@ c:\users\김영우\desktop\알고리즘 스터디\prob2_2\prob2_2\소스.cpp(18)
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
 c:\users\김영우\desktop\알고리즘 스터디\prob2_2\prob2_2\소스.cpp(21): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 'scanf' 선언을 참조하십시오.
-c:\users\김영우\desktop\알고리즘 스터디\prob2_2\prob2_2\소스.cpp(73): warning C4715: 'ceiling': 모든 제어 경로에서 값을 반환하지는 않습니다.
-c:\users\김영우\desktop\알고리즘 스터디\prob2_2\prob2_2\소스.cpp(56): warning C4715: 'floor': 모든 제어 경로에서 값을 반환하지는 않습니다.
+c:\users\김영우\desktop\알고리즘 스터디\prob2_2\prob2_2\소스.cpp(62): warning C4715: 'ceiling': 모든 제어 경로에서 값을 반환하지는 않습니다.
+c:\users\김영우\desktop\알고리즘 스터디\prob2_2\prob2_2\소스.cpp(50): warning C4715: 'floor': 모든 제어 경로에서 값을 반환하지는 않습니다.
   Prob2_2.vcxproj -> C:\Users\김영우\Desktop\알고리즘 스터디\Prob2_2\Debug\Prob2_2.exe
