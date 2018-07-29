@@ -1,0 +1,10 @@
+int *MakeArry(int N);
+int *MakeReverse(int N);
+void swap(int &a, int &b);
+int *Bubble(int *arr, int N);
+int *Selection(int *arr, int N);
+int *Insertion(int *arr, int N);
+int *Merge(int *arr, int p, int r);
+int* merging(int *arr, int p, int q, int r);
+int *copyarr(int *arr, int h, int t);
+int *copying(int *arr, int *cpyarr, int h, int t);
