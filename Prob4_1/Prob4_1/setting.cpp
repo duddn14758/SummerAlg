@@ -56,6 +56,24 @@ void C_Merge() {
 
 }
 
+void C_Quick1() {
+	printf("QuickSort1\t");
+	Calculate(arr1, 1000, 5, 0);
+	Calculate(arr2, 1000, 5, 1);
+	Calculate(arr3, 10000, 5, 0);
+	Calculate(arr4, 10000, 5, 1);
+	Calculate(arr5, 100000, 5, 0);
+	Calculate(arr6, 100000, 5, 1);	
+	printf("\n");
+}
+
+void C_Quick2() {
+	printf("QuickSort2\t");
+	arr1 = MakeReverse(1000);
+	arr1 = Quick2(arr1, 0, 999);
+	//Print(arr1, 1000);
+}
+
 
 void Calculate(int *arr, int N, int command, int type) {		//command에 따라 다른 배열 정렬시간 계산
 	clock_t startTime, endTime;
@@ -79,6 +97,10 @@ void Calculate(int *arr, int N, int command, int type) {		//command에 따라 다른 
 		break;
 	case 4:
 		arr = Merge(arr, 0, N - 1);
+		break;
+	case 5:
+		arr = Quick1(arr, 0, N - 1);
+		//Print(arr,N);
 		break;
 	}
 

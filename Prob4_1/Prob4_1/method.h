@@ -8,3 +8,7 @@ int *Merge(int *arr, int p, int r);
 int* merging(int *arr, int p, int q, int r);
 int *copyarr(int *arr, int h, int t);
 int *copying(int *arr, int *cpyarr, int h, int t);
+int *Quick1(int *arr, int p, int r);
+int partition(int *arr, int p, int q);
+int *Quick2(int *arr, int p, int r);
+int partition2(int *arr, int p, int q);

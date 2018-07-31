@@ -5,3 +5,5 @@ void PrintColumn();
 void C_Selection();
 void C_Insertion();
 void C_Merge();
+void C_Quick1();
+void C_Quick2();
