@@ -11,4 +11,6 @@ int *copying(int *arr, int *cpyarr, int h, int t);
 int *Quick1(int *arr, int p, int r);
 int partition(int *arr, int p, int q);
 int *Quick2(int *arr, int p, int r);
-int partition2(int *arr, int p, int q);
+void partition2(int *arr, int p, int r);
+int *Quick3(int *arr, int p, int r);
+void partition3(int *arr, int p, int r);

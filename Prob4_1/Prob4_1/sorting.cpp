@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include "setting.h"
 
-
-
-
 int main() {
 	
 	PrintColumn();
@@ -14,10 +11,7 @@ int main() {
 	C_Merge();
 	C_Quick1();
 	C_Quick2();
-
-	
-	
-
+	C_Quick3();
 
 	return 0;
 }

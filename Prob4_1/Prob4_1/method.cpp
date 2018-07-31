@@ -119,10 +119,8 @@ int *copying(int *arr, int *cpyarr, int h, int t) {
 }
 
 int *Quick1(int *arr, int p, int r) {
-	//printf("quick 들어온숫자 p : %d, r : %d\n", p, r);
 	if (p < r) {
 		int q = partition(arr, p, r);
-		//printf("p : %d, q : %d, r : %d\n", p, q, r);
 		Quick1(arr, p, q-1);
 		Quick1(arr, q + 1, r);
 		return arr;
@@ -137,58 +135,53 @@ int partition(int *arr, int p, int r) {
 		if (arr[j] > pivot) {
 			int tmp = arr[j];
 			for (int k = j; k < i; k++) {
-				//printf("%d %d\n", arr[k],k);
 				arr[k] = arr[k + 1];
 			}
-			arr[i--] = tmp;			
+			arr[i--] = tmp;
 		}
-		//printf("%d\n", j);
 	}
-	//printf("partition 리턴값 : %d\n", i);
-	return i;	
+	return i;
 }
 
-int *Quick2(int *arr, int p, int r) {
-	//printf("quick 들어온숫자 p : %d, r : %d\n", p, r);
+int *Quick2(int *arr, int p, int r) {	
 	if (p < r) {
-		int q = partition2(arr, p, r);
-		//printf("p : %d, q : %d, r : %d\n", p, q, r);
-		Quick1(arr, p, q - 1);
-		Quick1(arr, q + 1, r);
+		partition2(arr, p, r);
+		int q = partition(arr, p, r-1);
+		Quick2(arr, p, q-1);
+		Quick2(arr, q + 1, r);
 		return arr;
 	}
 	return arr;
 }
 
-int partition2(int *arr, int p, int r) {
-	int pivot;
-	int pi;
-	if (arr[p] >= arr[r] && arr[p] <= arr[(p + r) / 2]) {
-		pivot = arr[p];
-		pi = p;
+void partition2(int *arr, int p, int r) {
+	int q = (p + r) / 2;
+	if (arr[p] > arr[q]) {
+		swap(arr[p], arr[q]);
 	}
-	else if (arr[p] <= arr[r] && arr[r] <= arr[(p + r) / 2]) {
-		pivot = arr[r];
-		pi = r;
+	if (arr[q] > arr[r]) {
+		swap(arr[q], arr[r]);
 	}
-	else {
-		pivot = arr[(p + r) / 2];
-		pi = (p + r) / 2;
+	if (arr[p] > arr[r]) {
+		swap(arr[q], arr[r]);
+	}	
+	swap(arr[q], arr[r-1]);
+}
+
+int *Quick3(int *arr, int p, int r) {
+	if (p < r) {
+		partition3(arr, p, r);
+		int q = partition(arr, p, r);
+		Quick3(arr, p, q - 1);
+		Quick3(arr, q + 1, r);
+		return arr;
 	}
-	int i = pi, j = pi;
-	while (--j >= p) {
-		if (arr[j] > pivot) {
-			int tmp = arr[j];
-			for (int k = j; k < i; k++) {
-				//printf("%d %d\n", arr[k],k);
-				arr[k] = arr[k + 1];
-			}
-			arr[i--] = tmp;
-		}
-		//printf("%d\n", j);
-	}
-	//printf("partition 리턴값 : %d\n", i);
-	return i;
+	return arr;
+}
+
+void partition3(int *arr, int p, int r) {
+	int random = rand()%(r-p);
+	swap(arr[p + random], arr[r]);
 }
 
 void swap(int &a, int &b) {
